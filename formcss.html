@@ -1,0 +1,137 @@
+<html>
+<head>
+    <title>html page to show form tags</title>
+
+    <style>
+        body {
+            background-color: #8CFFC2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00000020;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #888;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        textarea {
+            height: 70px;
+        }
+
+        .gender-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #777;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+        }
+
+        button:first-of-type {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button:last-of-type {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+
+    <form>
+        <label>Name</label>
+        <input type="text" name="username" required>
+
+        <label>E-mail</label>
+        <input type="text" name="mail" required>
+
+        <label>Password</label>
+        <input type="password" name="password" required>
+
+        <label>Mobile number</label>
+        <input type="text" name="number" value="+91" maxlength="13" pattern="[0-9,+]*">
+
+        <label>Address</label>
+        <textarea required></textarea>
+
+        <label>Gender</label>
+        <div class="gender-group">
+            <input type="radio" name="gender" value="male"> <label>Male</label>
+            <input type="radio" name="gender" value="female"> <label>Female</label>
+            <input type="radio" name="gender" value="other"> <label>Other</label>
+        </div>
+
+        <label>D.O.B</label>
+        <input type="date" name="dob" required>
+
+        <label>Nationality</label>
+        <select name="nationaliy" required>
+            <option value="indian">Indian</option>
+            <option value="American">American</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Canadian">Canadian</option>
+        </select>
+
+        <fieldset>
+            <legend>Language known</legend>
+
+            <input type="checkbox" name="eng"> English <br>
+            <input type="checkbox" name="mal"> Malayalam <br>
+            <input type="checkbox" name="hin"> Hindi
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>
